@@ -1,40 +1,45 @@
-# Kumbh-style ghat crowd simulation (JuPedSim) - synthetic demo
+# Kumbh ghat crowd simulation (JuPedSim) - 5000 pilgrims, 3 gates -> 1 ghat
 
-**All geometry and parameters are assumed placeholders, not real Prayagraj data.**
-The purpose is to show the simulation workflow; results should not be read as
-predictions for a real sector.
+Layout is **schematic** (the papers give widths/times but no coordinates).
+Inputs taken from the supplied papers vs. assumed are listed in
+[INPUTS_AND_SOURCES.md](INPUTS_AND_SOURCES.md). Read that first.
 
-## Scenario (`run_ghat.py`)
-5000 pilgrims enter through three 8 m gates (west 2000, north 1500, south 1500;
-600 people/min total for ~8 min), cross an 80x50 m plaza, pass a 5 m wide, 20 m
-long neck (the bottleneck) and reach a ghat basin. Model: Collision-Free Speed
-Model, dt = 0.05 s.
+## Scenario (`run_kumbh.py`)
+5000 pilgrims enter over three 10 m pontoon bridges (width: Prayagraj 2013, Mehrotra & Vera),
+queue in a holding area, take a 5-minute dip (Haridwar paper) in a 100 m bathing strip, and
+leave along the shore. Walking speed 1.3 m/s (Still), body width 0.5 m, flat arrival profile.
+JuPedSim 1.4.2, Collision-Free Speed Model.
 
-## Results (`results/`)
-- `simulation.mp4`, `simulation.gif` - animation (colour = speed)
-- `density_timeseries.png`, `peak_density_map.png` - density
-- `travel_time.png` - travel time by gate
-- `queue_formation.png` - queue growth and snapshot at maximum queue
-- `bottleneck.png` - cumulative curves, flow across the neck, neck speed/density
-- `metrics.json`, `timeseries.csv` - numbers
+## Results (`results/`, synthetic layout)
+- `simulation.mp4`, `simulation.gif`, `layout.png`
+- `density_timeseries.png`, `peak_density_map.png`, `travel_time.png`,
+  `queue_formation.png`, `bottleneck.png`, `metrics.json`, `timeseries.csv`
 
-Headline (synthetic inputs): the neck passes ~222 people/min against ~600/min
-demand, so a queue of up to ~2750 people builds in front of it and takes ~15 min
-to clear after the last entry. Peak local density 6.0 p/m2 (2 m cells); mean
-travel time ~600 s.
+| Metric | Value |
+|---|---|
+| Completed | 5000/5000 in 2583 s |
+| Ghat capacity (assumed layout) / sustained throughput | 192 / 153 dips per min |
+| Demand | 600 people/min |
+| Largest holding queue | 3357 people at t=500 s, cleared by ~1911 s |
+| Wait in holding before a slot | mean 656 s, p95 1373 s |
+| Total entry-to-exit | mean 1200 s, p95 1840 s |
+| Peak local density, moving/standing | 4.25 / 2.5 p/m2 (2 m cells) |
+| Bridge flow | at most 0.45 p/(m s) = 25% of Green Guide 1.82; bridges are not the bottleneck |
 
-## Known limitations
-- "Queue length" metric is unreliable (reported 59 m, snapshot shows ~23 m); use the snapshot.
-- Neck flow (0.74 p/(m*s)) is below published values (~1.2-1.9) and is uncalibrated.
-- No dwell time at the water, no groups, no exit flow, no obstacles.
-- Waypoints inside a crowded plaza caused a deadlock in an early version, so agents are routed straight to the exit.
+## Limitations (important)
+- The ghat is the bottleneck, but its capacity (192/min) follows directly from my assumed
+  100 m frontage, 0.7 m slot spacing and aisle layout, so the queue size is mostly an
+  assumption, not a finding.
+- "Moving" density includes people waiting in the holding queue, so its time above
+  2 p/m2 (~1900 s) overstates risk for a standing crowd; compare with the 5/6 p/m2 static limits.
+- 96 of 5000 agents (1.9%) timed out reaching their slot and started their dip anyway.
+- No stairs, groups, wet-surface effects or counter-flow on the bridges. 2D model.
+- An earlier version with a shared arrival/exit strip jammed (21% timeouts); the strip now has
+  a walkway and aisles. `legacy_assumed_inputs/` holds the first, assumption-only demo.
 
 ## Run
 ```
-python -m venv .venv && .venv/Scripts/activate   # Windows
 pip install -r requirements.txt
-python run_ghat.py 5.0      # neck width in m
-python make_video.py        # needs out_ghat_neck5m/frames.npz from the run
+python run_kumbh.py 5000
+python make_results.py 5000
 ```
-`run_sector.py` is the earlier, simpler single-sector demo (`python run_sector.py 400`).
-Written for the PyPI `jupedsim` 1.4.2 API (differs from the repo's current master API).

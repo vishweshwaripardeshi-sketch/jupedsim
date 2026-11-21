@@ -1,73 +1,113 @@
 {
+  "synthetic_layout": true,
   "scenario": {
     "pilgrims": 5000,
     "gates": {
       "west": {
         "n": 2000,
-        "rate_per_min": 240
+        "rate_per_min": 240.0
       },
       "north": {
         "n": 1500,
-        "rate_per_min": 180
+        "rate_per_min": 180.0
       },
       "south": {
         "n": 1500,
-        "rate_per_min": 180
+        "rate_per_min": 180.0
       }
     },
-    "neck_width_m": 5.0,
-    "synthetic": true
+    "bridge_width_m": 10.0,
+    "dwell_s": 300.0,
+    "bathing_slots": 960,
+    "ghat_capacity_dips_per_min": 192.0
   },
   "completed": "5000/5000",
-  "simulated_time_s": 1547.4,
-  "wall_time_s": 333,
+  "simulated_time_s": 2583.0,
+  "wall_time_s": 437,
+  "slot_timeouts": 96,
   "density": {
-    "peak_local_2m_cell_p_m2": 6.0,
-    "time_above_4_p_m2_s": 1134.0,
-    "time_above_6_p_m2_s": 0.0,
-    "peak_plaza_avg": 0.76225,
-    "peak_neck_avg": 1.7,
-    "peak_basin_avg": 0.23866666666666667
+    "moving_peak_cell_p_m2": 4.25,
+    "moving_time_above_1.5_s": 2086.0,
+    "moving_time_above_2.0_s": 1907.0,
+    "moving_time_above_4.0_s": 6.0,
+    "static_bathing_peak_cell_p_m2": 2.5,
+    "static_time_above_5_s": 0.0,
+    "static_time_above_6_s": 0.0,
+    "strip_avg_peak_p_m2": 1.48,
+    "plaza_moving_avg_peak_p_m2": 0.3592222222222222
   },
   "travel_time_s": {
-    "in_sector": {
-      "mean": 602.13105,
-      "median": 575.25,
-      "p95": 1133.0075,
-      "max": 1469.7
+    "wait_in_holding_before_slot": {
+      "mean": 655.60392,
+      "median": 641.825,
+      "p95": 1372.6550000000002,
+      "max": 1520.65
     },
-    "incl_wait_outside_gates": {
-      "mean": 602.1410700000001,
-      "median": 575.25,
-      "p95": 1133.0075,
-      "max": 1469.7333333333333
+    "walk_to_slot": {
+      "mean": 99.96828000000001,
+      "median": 76.0,
+      "p95": 311.0,
+      "max": 401.0
     },
-    "by_gate_in_sector_mean": {
-      "west": 487.332,
-      "north": 685.0819333333333,
-      "south": 672.2455666666666
+    "entry_to_start_of_dip": {
+      "mean": 755.5722000000001,
+      "median": 759.3,
+      "p95": 1461.0125,
+      "max": 1836.3
+    },
+    "exit_after_dip": {
+      "mean": 144.73491000000007,
+      "median": 104.65000000000009,
+      "p95": 392.41500000000013,
+      "max": 684.0500000000002
+    },
+    "total_entry_to_exit": {
+      "mean": 1200.30711,
+      "median": 1218.4,
+      "p95": 1840.4275,
+      "max": 2170.25
+    },
+    "mean_entry_to_dip_by_gate": {
+      "west": 639.0355,
+      "north": 834.026,
+      "south": 832.5006666666667
     }
   },
   "queue": {
-    "max_slow_agents_in_plaza": 2755,
-    "time_of_max_queue_s": 674.0,
-    "max_queue_length_p95_m": 59.34561747222489,
+    "max_waiting_in_holding": 3357,
+    "time_of_max_s": 500.0,
     "max_waiting_outside_gates": 3,
-    "wait_outside_gates_s": {
-      "mean": 0.010020000000015107,
-      "median": 0.0,
-      "p95": 0.033333333333416704,
-      "max": 0.05000000000001137
-    },
-    "queue_dissolved_at_s": 1438.0
+    "queue_cleared_at_s": 1911.0,
+    "fraction_agents_that_waited_over_60s": 0.808
   },
   "bottleneck": {
-    "neck_width_m": 5.0,
-    "demand_flow_p_m_s": 2.0,
-    "sustained_flow_p_m_s_(windows>=80%_of_peak)": 0.7416260162601626,
-    "peak_30s_flow_p_m_s": 0.8400000000000001,
-    "sustained_throughput_p_per_min": 222.48780487804876,
-    "mean_speed_in_neck_m_s": 0.5231209836304421,
-    "min_speed_in_neck_m_s": 0.4257211781470834
+    "green_guide_flow_p_m_s": 1.8166666666666667,
+    "bridges": {
+      "west": {
+        "pilgrims": 2000,
+        "mean_specific_flow_p_m_s": 0.38901960784313727,
+        "peak_30s_specific_flow_p_m_s": 0.44666666666666666,
+        "pct_of_green_guide": 24.587155963302752
+      },
+      "north": {
+        "pilgrims": 1500,
+        "mean_specific_flow_p_m_s": 0.24516666666666667,
+        "peak_30s_specific_flow_p_m_s": 0.2866666666666667,
+        "pct_of_green_guide": 15.77981651376147
+      },
+      "south": {
+        "pilgrims": 1500,
+        "mean_specific_flow_p_m_s": 0.24666666666666667,
+        "peak_30s_specific_flow_p_m_s": 0.29,
+        "pct_of_green_guide": 15.963302752293576
+      }
+    },
+    "ghat_capacity_dips_per_min": 192.0,
+    "ghat_sustained_dip_starts_per_min": 153.12328767123287,
+    "peak_bathers_at_once": 910,
+    "ghat_rate_window_s": [
+      450.05,
+      1911.0
+    ]
   }
 }
