@@ -1,0 +1,6 @@
+jupedsim==1.4.2
+shapely
+matplotlib
+numpy
+imageio
+imageio-ffmpeg
