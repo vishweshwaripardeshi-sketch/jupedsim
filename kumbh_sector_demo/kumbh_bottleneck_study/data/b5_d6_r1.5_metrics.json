@@ -1,0 +1,159 @@
+{
+ "name": "b5_d6_r1.5",
+ "bottleneck": "B5",
+ "rho0": 1.5,
+ "population": "mixed",
+ "config": {
+  "name": "b5_d6_r1.5",
+  "bn": "B5",
+  "rho0": 1.5,
+  "pop": "mixed",
+  "strip_depth": 6,
+  "policy": "controlled",
+  "max_time": 7000
+ },
+ "walkers": 1425,
+ "static_queuers": 0,
+ "placement_failures": 0,
+ "completed": "1425/1425",
+ "simulated_time_s": 1783.0,
+ "wall_s": 101,
+ "composition": {
+  "adult (single)": 451,
+  "elderly": 201,
+  "child (with group)": 73,
+  "adult in rural group": 550,
+  "adult in urban group": 150
+ },
+ "n_groups": 114,
+ "group_sizes": {
+  "mean": 7.798245614035087,
+  "max": 13
+ },
+ "share_in_groups": 0.623859649122807,
+ "travel_time_s": {
+  "n": 1425,
+  "mean": 1004.5359649122807,
+  "median": 1053.25,
+  "p95": 1709.7600000000002,
+  "max": 1782.7
+ },
+ "travel_time_by_class_s": {
+  "adult (single)": {
+   "n": 451,
+   "mean": 911.4956762749446,
+   "median": 814.0,
+   "p95": 1524.2000000000003,
+   "max": 1782.7
+  },
+  "elderly": {
+   "n": 201,
+   "mean": 981.7037313432836,
+   "median": 1042.3500000000001,
+   "p95": 1707.3000000000002,
+   "max": 1757.95
+  },
+  "child (with group)": {
+   "n": 73,
+   "mean": 1044.9952054794521,
+   "median": 1062.3500000000001,
+   "p95": 1690.6200000000001,
+   "max": 1775.8000000000002
+  },
+  "adult in rural group": {
+   "n": 550,
+   "mean": 1034.9583636363639,
+   "median": 1067.825,
+   "p95": 1740.1375,
+   "max": 1770.95
+  },
+  "adult in urban group": {
+   "n": 150,
+   "mean": 1183.6333333333337,
+   "median": 1280.3000000000002,
+   "p95": 1701.08,
+   "max": 1721.7
+  }
+ },
+ "density": {
+  "moving_peak_cell": 3.5,
+  "moving_s_above_1.5": 1120.0,
+  "moving_s_above_2.0": 1051.0,
+  "moving_s_above_4.0": 0.0,
+  "static_peak_cell": 2.5,
+  "static_s_above_5": 0.0,
+  "static_s_above_6": 0.0
+ },
+ "queue": {
+  "max_slow_agents": 1006,
+  "max_holding": 969,
+  "time_of_max_holding_s": 0.05
+ },
+ "zone_density_peak": {
+  "staging": 0.4166666666666667,
+  "strip": 0.9444444444444444
+ },
+ "flows_p_m_s": {},
+ "ghat": {
+  "slots": 456,
+  "strip_depth_m": 6.0,
+  "columns": 8,
+  "capacity_dips_per_min_at_300s": 91.2,
+  "sustained_dip_starts_per_min": 56.857610474631755,
+  "queue_cleared_at_s": 1061.0,
+  "slot_timeouts": 23,
+  "time_to_start_dip_s": {
+   "n": 1425,
+   "mean": 523.9985964912281,
+   "median": 435.0,
+   "p95": 1127.7999999999997,
+   "max": 1464.0
+  },
+  "dwell_s": {
+   "n": 1425,
+   "mean": 300.0,
+   "median": 300.0,
+   "p95": 300.0,
+   "max": 300.0
+  },
+  "policy": "n/a",
+  "peak_bathers": 429,
+  "time_to_start_dip_by_class_s": {
+   "adult (single)": {
+    "n": 451,
+    "mean": 510.2350332594235,
+    "median": 391.0,
+    "p95": 1139.0,
+    "max": 1464.0
+   },
+   "elderly": {
+    "n": 201,
+    "mean": 505.66169154228857,
+    "median": 409.0,
+    "p95": 1135.0,
+    "max": 1424.0
+   },
+   "child (with group)": {
+    "n": 73,
+    "mean": 509.82191780821915,
+    "median": 399.0,
+    "p95": 1081.0,
+    "max": 1326.0
+   },
+   "adult in rural group": {
+    "n": 550,
+    "mean": 500.04545454545456,
+    "median": 532.5,
+    "p95": 1093.2999999999997,
+    "max": 1424.0
+   },
+   "adult in urban group": {
+    "n": 150,
+    "mean": 684.68,
+    "median": 709.0,
+    "p95": 1304.0999999999997,
+    "max": 1348.0
+   }
+  }
+ }
+}

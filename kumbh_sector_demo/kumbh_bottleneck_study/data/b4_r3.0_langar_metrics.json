@@ -1,0 +1,113 @@
+{
+ "name": "b4_r3.0_langar",
+ "bottleneck": "B4",
+ "rho0": 3.0,
+ "population": "mixed",
+ "config": {
+  "name": "b4_r3.0_langar",
+  "bn": "B4",
+  "rho0": 3.0,
+  "pop": "mixed",
+  "langar": true,
+  "max_time": 1500
+ },
+ "walkers": 2093,
+ "static_queuers": 390,
+ "placement_failures": 0,
+ "completed": "2093/2093",
+ "simulated_time_s": 418.0,
+ "wall_s": 56,
+ "composition": {
+  "adult (single)": 664,
+  "elderly": 283,
+  "child (with group)": 104,
+  "adult in rural group": 818,
+  "adult in urban group": 224
+ },
+ "n_groups": 173,
+ "group_sizes": {
+  "mean": 7.566473988439307,
+  "max": 13
+ },
+ "share_in_groups": 0.6254180602006689,
+ "travel_time_s": {
+  "n": 2093,
+  "mean": 262.62324414715715,
+  "median": 265.65000000000003,
+  "p95": 394.64,
+  "max": 417.35
+ },
+ "travel_time_by_class_s": {
+  "adult (single)": {
+   "n": 664,
+   "mean": 259.5620481927711,
+   "median": 258.15,
+   "p95": 395.38250000000005,
+   "max": 417.35
+  },
+  "elderly": {
+   "n": 283,
+   "mean": 266.90053003533563,
+   "median": 267.1,
+   "p95": 387.725,
+   "max": 413.8
+  },
+  "child (with group)": {
+   "n": 104,
+   "mean": 251.97644230769234,
+   "median": 255.10000000000002,
+   "p95": 372.06750000000005,
+   "max": 403.95000000000005
+  },
+  "adult in rural group": {
+   "n": 818,
+   "mean": 260.82102689486555,
+   "median": 265.125,
+   "p95": 398.38,
+   "max": 416.45000000000005
+  },
+  "adult in urban group": {
+   "n": 224,
+   "mean": 277.81808035714283,
+   "median": 284.675,
+   "p95": 390.76500000000004,
+   "max": 414.55
+  }
+ },
+ "density": {
+  "moving_peak_cell": 3.75,
+  "moving_s_above_1.5": 410.0,
+  "moving_s_above_2.0": 338.0,
+  "moving_s_above_4.0": 0.0,
+  "static_peak_cell": 3.5,
+  "static_s_above_5": 0.0,
+  "static_s_above_6": 0.0
+ },
+ "queue": {
+  "max_slow_agents": 1878,
+  "max_holding": 0,
+  "time_of_max_holding_s": 0.05
+ },
+ "zone_density_peak": {
+  "start": 2.093,
+  "langar_reach": 0.754
+ },
+ "flows_p_m_s": {
+  "x40": {
+   "width_m": 50.0,
+   "n": 2093,
+   "peak_30s_specific_flow": 0.568,
+   "sustained_specific_flow": 0.522,
+   "first_s": 15.0,
+   "last_s": 113.0
+  },
+  "x100": {
+   "width_m": 50.0,
+   "n": 2093,
+   "peak_30s_specific_flow": 0.23600000000000002,
+   "sustained_specific_flow": 0.21222222222222223,
+   "first_s": 51.0,
+   "last_s": 324.0
+  }
+ }
+}

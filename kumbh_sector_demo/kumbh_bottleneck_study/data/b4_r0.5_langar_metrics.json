@@ -1,0 +1,113 @@
+{
+ "name": "b4_r0.5_langar",
+ "bottleneck": "B4",
+ "rho0": 0.5,
+ "population": "mixed",
+ "config": {
+  "name": "b4_r0.5_langar",
+  "bn": "B4",
+  "rho0": 0.5,
+  "pop": "mixed",
+  "langar": true,
+  "max_time": 1500
+ },
+ "walkers": 352,
+ "static_queuers": 390,
+ "placement_failures": 0,
+ "completed": "352/352",
+ "simulated_time_s": 226.0,
+ "wall_s": 11,
+ "composition": {
+  "adult (single)": 120,
+  "elderly": 50,
+  "child (with group)": 22,
+  "adult in rural group": 118,
+  "adult in urban group": 42
+ },
+ "n_groups": 28,
+ "group_sizes": {
+  "mean": 7.464285714285714,
+  "max": 13
+ },
+ "share_in_groups": 0.59375,
+ "travel_time_s": {
+  "n": 352,
+  "mean": 144.73252840909092,
+  "median": 148.525,
+  "p95": 190.75,
+  "max": 225.95000000000002
+ },
+ "travel_time_by_class_s": {
+  "adult (single)": {
+   "n": 120,
+   "mean": 128.15375,
+   "median": 133.8,
+   "p95": 182.035,
+   "max": 189.35000000000002
+  },
+  "elderly": {
+   "n": 50,
+   "mean": 151.52900000000002,
+   "median": 153.45,
+   "p95": 193.98000000000002,
+   "max": 225.95000000000002
+  },
+  "child (with group)": {
+   "n": 22,
+   "mean": 150.76136363636365,
+   "median": 147.10000000000002,
+   "p95": 195.8375,
+   "max": 196.8
+  },
+  "adult in rural group": {
+   "n": 118,
+   "mean": 156.7529661016949,
+   "median": 158.675,
+   "p95": 193.08,
+   "max": 198.55
+  },
+  "adult in urban group": {
+   "n": 42,
+   "mean": 147.07976190476188,
+   "median": 146.75,
+   "p95": 185.9925,
+   "max": 197.4
+  }
+ },
+ "density": {
+  "moving_peak_cell": 2.25,
+  "moving_s_above_1.5": 55.0,
+  "moving_s_above_2.0": 3.0,
+  "moving_s_above_4.0": 0.0,
+  "static_peak_cell": 3.5,
+  "static_s_above_5": 0.0,
+  "static_s_above_6": 0.0
+ },
+ "queue": {
+  "max_slow_agents": 5,
+  "max_holding": 0,
+  "time_of_max_holding_s": 0.05
+ },
+ "zone_density_peak": {
+  "start": 0.352,
+  "langar_reach": 0.17933333333333334
+ },
+ "flows_p_m_s": {
+  "x40": {
+   "width_m": 50.0,
+   "n": 352,
+   "peak_30s_specific_flow": 0.18933333333333333,
+   "sustained_specific_flow": 0.18933333333333333,
+   "first_s": 17.0,
+   "last_s": 69.0
+  },
+  "x100": {
+   "width_m": 50.0,
+   "n": 352,
+   "peak_30s_specific_flow": 0.08933333333333333,
+   "sustained_specific_flow": 0.08833333333333332,
+   "first_s": 55.0,
+   "last_s": 189.0
+  }
+ }
+}

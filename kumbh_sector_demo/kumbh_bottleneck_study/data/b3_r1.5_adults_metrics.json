@@ -1,0 +1,85 @@
+{
+ "name": "b3_r1.5_adults",
+ "bottleneck": "B3",
+ "rho0": 1.5,
+ "population": "adults",
+ "config": {
+  "name": "b3_r1.5_adults",
+  "bn": "B3",
+  "rho0": 1.5,
+  "pop": "adults",
+  "max_time": 2500
+ },
+ "walkers": 1344,
+ "static_queuers": 0,
+ "placement_failures": 0,
+ "completed": "1342/1344",
+ "simulated_time_s": 2500.0,
+ "wall_s": 63,
+ "composition": {
+  "adult (single)": 1344,
+  "elderly": 0,
+  "child (with group)": 0,
+  "adult in rural group": 0,
+  "adult in urban group": 0
+ },
+ "n_groups": 0,
+ "group_sizes": {
+  "mean": 0,
+  "max": 0
+ },
+ "share_in_groups": 0.0,
+ "travel_time_s": {
+  "n": 1342,
+  "mean": 374.05204918032786,
+  "median": 372.35,
+  "p95": 656.4475000000001,
+  "max": 689.6
+ },
+ "travel_time_by_class_s": {
+  "adult (single)": {
+   "n": 1342,
+   "mean": 374.05204918032786,
+   "median": 372.35,
+   "p95": 656.4475000000001,
+   "max": 689.6
+  }
+ },
+ "density": {
+  "moving_peak_cell": 4.25,
+  "moving_s_above_1.5": 643.0,
+  "moving_s_above_2.0": 634.0,
+  "moving_s_above_4.0": 2.0,
+  "static_peak_cell": 0.0,
+  "static_s_above_5": 0.0,
+  "static_s_above_6": 0.0
+ },
+ "queue": {
+  "max_slow_agents": 1025,
+  "max_holding": 0,
+  "time_of_max_holding_s": 0.05
+ },
+ "zone_density_peak": {
+  "feeder": 1.344,
+  "bridge": 2.365,
+  "alley": 1.0333333333333334
+ },
+ "flows_p_m_s": {
+  "bridge_in": {
+   "width_m": 10.0,
+   "n": 1344,
+   "peak_30s_specific_flow": 0.7833333333333333,
+   "sustained_specific_flow": 0.7591666666666668,
+   "first_s": 1.0,
+   "last_s": 214.0
+  },
+  "alley_in": {
+   "width_m": 3.0,
+   "n": 1342,
+   "peak_30s_specific_flow": 0.7444444444444445,
+   "sustained_specific_flow": 0.7166666666666666,
+   "first_s": 27.0,
+   "last_s": 652.0
+  }
+ }
+}

@@ -43,3 +43,10 @@ pip install -r requirements.txt
 python run_kumbh.py 5000
 python make_results.py 5000
 ```
+
+## Prayagraj bottleneck study (newer)
+[kumbh_bottleneck_study/](kumbh_bottleneck_study/) simulates four bottlenecks taken from Mehrotra & Vera's book
+(width cascade, Akhara thoroughfare, Sangam shoreline front, river-exit control) with a mixed Kumbh crowd at three
+densities. Start with [REPORT.md](kumbh_bottleneck_study/REPORT.md), then
+[INPUTS_AND_SOURCES.md](kumbh_bottleneck_study/INPUTS_AND_SOURCES.md) (what is sourced vs assumed).
+Charts are in `charts/`, videos in `videos/`.

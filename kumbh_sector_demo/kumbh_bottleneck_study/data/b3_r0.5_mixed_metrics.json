@@ -1,0 +1,113 @@
+{
+ "name": "b3_r0.5_mixed",
+ "bottleneck": "B3",
+ "rho0": 0.5,
+ "population": "mixed",
+ "config": {
+  "name": "b3_r0.5_mixed",
+  "bn": "B3",
+  "rho0": 0.5,
+  "pop": "mixed",
+  "max_time": 2500
+ },
+ "walkers": 463,
+ "static_queuers": 0,
+ "placement_failures": 0,
+ "completed": "463/463",
+ "simulated_time_s": 315.0,
+ "wall_s": 9,
+ "composition": {
+  "adult (single)": 157,
+  "elderly": 63,
+  "child (with group)": 28,
+  "adult in rural group": 164,
+  "adult in urban group": 51
+ },
+ "n_groups": 37,
+ "group_sizes": {
+  "mean": 7.513513513513513,
+  "max": 13
+ },
+ "share_in_groups": 0.6004319654427646,
+ "travel_time_s": {
+  "n": 463,
+  "mean": 190.86198704103674,
+  "median": 191.8,
+  "p95": 294.40999999999997,
+  "max": 314.55
+ },
+ "travel_time_by_class_s": {
+  "adult (single)": {
+   "n": 157,
+   "mean": 194.756050955414,
+   "median": 199.5,
+   "p95": 294.7,
+   "max": 307.0
+  },
+  "elderly": {
+   "n": 63,
+   "mean": 188.9849206349206,
+   "median": 186.85000000000002,
+   "p95": 305.58500000000004,
+   "max": 314.55
+  },
+  "child (with group)": {
+   "n": 28,
+   "mean": 176.31428571428572,
+   "median": 172.525,
+   "p95": 242.91,
+   "max": 259.5
+  },
+  "adult in rural group": {
+   "n": 164,
+   "mean": 195.49359756097564,
+   "median": 195.20000000000002,
+   "p95": 292.2275,
+   "max": 313.40000000000003
+  },
+  "adult in urban group": {
+   "n": 51,
+   "mean": 174.28627450980392,
+   "median": 166.3,
+   "p95": 283.6,
+   "max": 297.1
+  }
+ },
+ "density": {
+  "moving_peak_cell": 3.75,
+  "moving_s_above_1.5": 250.0,
+  "moving_s_above_2.0": 238.0,
+  "moving_s_above_4.0": 0.0,
+  "static_peak_cell": 0.0,
+  "static_s_above_5": 0.0,
+  "static_s_above_6": 0.0
+ },
+ "queue": {
+  "max_slow_agents": 234,
+  "max_holding": 0,
+  "time_of_max_holding_s": 0.05
+ },
+ "zone_density_peak": {
+  "feeder": 0.463,
+  "bridge": 0.8975,
+  "alley": 1.1222222222222222
+ },
+ "flows_p_m_s": {
+  "bridge_in": {
+   "width_m": 10.0,
+   "n": 463,
+   "peak_30s_specific_flow": 0.6133333333333334,
+   "sustained_specific_flow": 0.5916666666666668,
+   "first_s": 1.0,
+   "last_s": 90.0
+  },
+  "alley_in": {
+   "width_m": 3.0,
+   "n": 463,
+   "peak_30s_specific_flow": 0.7555555555555555,
+   "sustained_specific_flow": 0.7055555555555556,
+   "first_s": 25.0,
+   "last_s": 262.0
+  }
+ }
+}
